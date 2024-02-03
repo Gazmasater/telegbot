@@ -99,7 +99,7 @@ func handleCallbackQuery(bot *tgbotapi.BotAPI, update tgbotapi.Update, userState
 		bot.Send(editMsg)
 
 	case "floor", "wall", "electric":
-		// Установите состояние пользователя для следующего шага
+		// Установите состояние пользователя для следующего шаг
 		userStates[update.CallbackQuery.Message.Chat.ID] = update.CallbackQuery.Data
 
 		// Задайте вопрос о проблеме
